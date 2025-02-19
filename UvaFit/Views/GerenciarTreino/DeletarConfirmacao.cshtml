@@ -1,0 +1,15 @@
+﻿@model TreinoModel
+@{
+    ViewData["Title"] = "Deletar Treino";
+}
+
+<div class="text-center">
+    <h3>Deseja realmente deletar o treino de @Model.Nome?</h3>
+</div>
+
+<div class="text-center">
+    <a class="btn btn-success" role="button" asp-controller="GerenciarTreino" asp-action="Index">Cancelar</a>
+    <a class="btn btn-danger" role="button" asp-controller="GerenciarTreino" asp-action="Deletar" asp-route-id="@Model.Id">Confirmar</a>
+</div>
+
+

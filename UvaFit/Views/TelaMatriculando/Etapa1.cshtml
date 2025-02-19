@@ -1,0 +1,194 @@
+﻿
+@model UvaFit.Models.MatriculaModel
+@{
+    ViewData["Title"] = "Matrícula - Etapa 1";
+}
+
+<h2>Etapa 1: Dados Pessoais e Avaliação Física</h2>
+
+<form asp-action="Etapa1" method="post">
+    <div class="form-group">
+        <label for="Nome">Nome</label>
+        <input asp-for="Nome" class="form-control" placeholder="Digite seu nome" />
+        <span asp-validation-for="Nome" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="CPF">CPF</label>
+        <input asp-for="CPF" class="form-control" placeholder="Digite seu CPF" />
+        <span asp-validation-for="CPF" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="Email">E-mail</label>
+        <input asp-for="Email" class="form-control" placeholder="Digite seu e-mail" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group question-group">
+        <label>Possui alguma alergia?</label>
+        <div class="radio-group">
+            <label><input type="radio" name="alergia" value="sim" required /> Sim</label>
+            <label><input type="radio" name="alergia" value="nao" required /> Não</label>
+        </div>
+        <input type="text" name="detalhesAlergia" placeholder="Se sim, qual?" />
+    </div>
+
+    <div class="form-group question-group">
+        <label>Possui alguma doença crônica?</label>
+        <div class="radio-group">
+            <label><input type="radio" name="doencaCronica" value="sim" required /> Sim</label>
+            <label><input type="radio" name="doencaCronica" value="nao" required /> Não</label>
+        </div>
+        <input type="text" name="detalhesDoencaCronica" placeholder="Se sim, qual?" />
+    </div>
+
+    <div class="form-group question-group">
+        <label>Utiliza algum medicamento controlado?</label>
+        <div class="radio-group">
+            <label><input type="radio" name="medicamentoControlado" value="sim" required /> Sim</label>
+            <label><input type="radio" name="medicamentoControlado" value="nao" required /> Não</label>
+        </div>
+        <input type="text" name="detalhesMedicamentoControlado" placeholder="Se sim, qual?" />
+    </div>
+
+    <div class="form-group question-group">
+        <label>Possui condição física que limite seus movimentos?</label>
+        <div class="radio-group">
+            <label><input type="radio" name="condicaoFisica" value="sim" required /> Sim</label>
+            <label><input type="radio" name="condicaoFisica" value="nao" required /> Não</label>
+        </div>
+        <input type="text" name="detalhesCondicaoFisica" placeholder="Se sim, qual?" />
+    </div>
+
+    <div class="form-group question-group">
+        <label>Sofreu fratura ou cirurgia nos últimos 6 meses?</label>
+        <div class="radio-group">
+            <label><input type="radio" name="fraturaCirurgia" value="sim" required /> Sim</label>
+            <label><input type="radio" name="fraturaCirurgia" value="nao" required /> Não</label>
+        </div>
+        <input type="text" name="detalhesFraturaCirurgia" placeholder="Se sim, qual?" />
+    </div>
+
+    <div class="form-group question-group">
+        <label>Possui algum implante metálico?</label>
+        <div class="radio-group">
+            <label><input type="radio" name="implanteMetalico" value="sim" required /> Sim</label>
+            <label><input type="radio" name="implanteMetalico" value="nao" required /> Não</label>
+        </div>
+        <input type="text" name="detalhesImplanteMetalico" placeholder="Se sim, qual?" />
+    </div>
+
+    <div class="form-group question-group">
+        <label>Está grávida ou amamentando?</label>
+        <div class="radio-group">
+            <label><input type="radio" name="gravidezAmamentando" value="sim" required /> Sim</label>
+            <label><input type="radio" name="gravidezAmamentando" value="nao" required /> Não</label>
+        </div>
+
+    </div>
+
+    <div class="form-group question-group">
+        <label>Pratica alguma atividade física regularmente?</label>
+        <div class="radio-group">
+            <label><input type="radio" name="atividadeFisica" value="sim" required /> Sim</label>
+            <label><input type="radio" name="atividadeFisica" value="nao" required /> Não</label>
+        </div>
+        <input type="text" name="detalhesAtividadeFisica" placeholder="Se sim, qual?" />
+    </div>
+
+    <!-- Campo de upload -->
+    <div class="form-group">
+        <label for="fileUpload">Enviar Atestado</label>
+        <input type="file" id="fileUpload" name="fileUpload" accept=".pdf,.jpg,.jpeg,.png" required />
+        <p class="file-instruction">Formatos aceitos: PDF, JPG, PNG</p>
+    </div>
+
+  
+    <button type="submit" class="btn btn-primary">Próxima Etapa</button>
+</form>
+
+<style>
+    /* Plano de fundo */
+    .page-container {
+        /* Preenche a altura da página */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(to bottom, #5dd6bc, #2d9896);
+        padding: 20px;
+    }
+
+    /* Container do formulário */
+    .form-container {
+        background: #fff; /* Fundo branco */
+        padding: 30px;
+        border-radius: 10px; /* Bordas arredondadas */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+        width: 100%;
+        max-width: 600px; /* Limite de largura */
+        color: #000;
+        font-family: Arial, sans-serif;
+    }
+
+        .form-container h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="date"],
+        .form-group input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+            background: #f9f9f9;
+            color: #000;
+        }
+
+        .form-group input[type="radio"] {
+            margin-right: 10px;
+        }
+
+    .radio-group {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    .file-instruction {
+        font-size: 12px;
+        color: #666;
+        margin-top: 5px;
+    }
+
+    .btn-submit {
+        background-color: #FFC107;
+        color: #000;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+        .btn-submit:hover {
+            background-color: #FF4500;
+            transform: translateY(-2px);
+        }
+</style>

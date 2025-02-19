@@ -1,0 +1,75 @@
+﻿@model UsuarioModel
+@{
+    ViewData["Title"] = "Aluno";
+}
+
+<body>
+    <section>
+        <div id="matriculas">
+            <a asp-controller="GerenciarEquipamento" asp-action="EquipamentoAlunoIndex" class="btn">Visualizar Equipamentos</a>
+        </div>
+        <div>
+            <a  class="btn">Solicitar Acompanhamento</a>
+        </div>
+        <div id="usuarios">
+            <a class="btn">Pagamento</a>
+        </div>
+        <div id="treinos">
+            <a asp-controller="GerenciarTreino" asp-action="TreinoAlunoIndex" class="btn">Visualizar Treino</a>
+        </div>
+    </section>
+</body>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: 62.5%;
+    }
+
+    body {
+
+        font-size: 1.6rem;
+        line-height: 1.2;
+        color: #303030;
+    }
+
+    }
+
+    section {
+        margin-top: 15rem;
+        width: 100%;
+        height: 100%;
+    }
+
+        section div {
+            background: white;
+            padding: 20px;
+            border-radius: 50px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        section .btn {
+            background: #ffd000;
+            color: #004b78;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 30rem;
+            margin: 2rem auto;
+            font-weight: 700;
+            font-size: 2rem;
+        }
+
+            section .btn:hover {
+                background: #0056b3;
+                color: #ffd000;
+            }
+</style>

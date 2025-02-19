@@ -1,0 +1,223 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  background: linear-gradient(to top, #004b78, #4ad0a6);
+  line-height: 1.2;
+  color: #303030;
+}
+
+header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  background-color: white;
+  box-shadow: 0 0 20px 5px #4ad0a6;
+
+  a {
+    text-decoration: none;
+
+    & div {
+      display: flex;
+      gap: 1rem;
+
+      & .circulo {
+        position: absolute;
+        top: 0;
+        margin-top: 2.8rem;
+        left: 16.5rem;
+        transform: translateX(-50%);
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+        background-color: #ffd000;
+      }
+
+      & .fit {
+        text-transform: uppercase;
+        font-size: 3rem;
+        padding-top: 1rem;
+        font-weight: 700;
+        z-index: 99;
+        color: black;
+      }
+
+      & .uva {
+        text-transform: uppercase;
+        font-size: 5rem;
+        font-weight: 700;
+        color: #004b78;
+      }
+    }
+  }
+
+  & p {
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #004b78;
+  }
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+  margin: 23.4rem;
+
+  & .container {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+    height: 45rem;
+    width: 45rem;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    box-shadow: 0 0 20px 5px #4ad0a6;
+    border-radius: 5rem;
+
+    & .botoesform {
+      margin-top: 4rem;
+      position: absolute;
+      top: 0;
+      border-radius: 3rem;
+      box-shadow: 0 0 7px 0 #004b78;
+
+      & button {
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        color: #004b78;
+        position: relative;
+        padding: 1.5rem 3.5rem;
+        font-size: 2rem;
+        font-weight: 700;
+      }
+
+      & .botaocolor {
+        position: absolute;
+        left: 14rem;
+        width: 17.5rem;
+        height: 100%;
+        background-color: #ffd000;
+        border-radius: 3rem;
+        transition: 0.3s;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.514);
+      }
+    }
+
+    .input-principal {
+      font-weight: 600;
+      color: #004b78;
+
+      & form {
+        margin-top: 10rem;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        gap: 1.5rem;
+        text-align: center;
+      }
+
+      & .botao-input {
+        border-radius: 3rem;
+        padding: 1.5rem 3rem;
+        border: none;
+        color: rgb(0, 0, 0);
+        box-shadow: 0 0 20px 0 darkgray;
+        text-align: center;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      & .botao-enviar {
+        color: #004b78;
+        padding: 1.5rem 3rem;
+        border-radius: 3rem;
+        border: none;
+        background-color: #ffd000;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-top: 0.5rem;
+        cursor: pointer;
+        border-bottom: solid 0.4rem #004b78;
+        border-right: solid 0.4rem #004b78;
+        border-top: 0;
+        border-left: 0;
+
+        & a {
+          text-decoration: none;
+          color: #004b78;
+          font-weight: 700;
+          font-size: 1.8rem;
+          padding: 1.5rem 7rem;
+        }
+      }
+
+      & .botao-enviar:hover {
+        color: #004b78;
+        padding: 1.5rem 3rem;
+        border-radius: 3rem;
+        border: none;
+        background-color: #ffd000;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-top: 2rem;
+        cursor: pointer;
+
+        & a {
+          text-decoration: none;
+          color: #004b78;
+          font-weight: 700;
+          font-size: 1.8rem;
+          padding: 1.5rem 7rem;
+        }
+      }
+
+      & .botao-enviar:active {
+        color: #ffd000;
+        padding: 1.5rem 3rem;
+        border-radius: 3rem;
+        border: none;
+        background-color: #004b78;
+        font-size: 1.8rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-top: 2rem;
+        cursor: pointer;
+
+        & a {
+          text-decoration: none;
+          color: #ffd000;
+          font-weight: 700;
+          font-size: 1.8rem;
+          padding: 1.5rem 7rem;
+        }
+      }
+
+      & a {
+        color: grey;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

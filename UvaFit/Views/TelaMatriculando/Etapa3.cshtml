@@ -1,0 +1,20 @@
+﻿@model UvaFit.Models.MatriculaModel
+@{
+    ViewData["Title"] = "Matrícula - Confirmação";
+}
+
+<h2>Etapa 3: Confirmação</h2>
+
+<p>Por favor, revise suas informações:</p>
+
+<ul>
+    <li><strong>Nome:</strong> @Model.Nome</li>
+    <li><strong>CPF:</strong> @Model.CPF</li>
+    <li><strong>E-mail:</strong> @Model.Email</li>
+    <li><strong>Plano:</strong> @Model.PlanoMatricula</li>
+</ul>
+
+<form asp-action="Finalizar" method="post">
+    <button type="submit" class="btn btn-success">Finalizar Matrícula</button>
+</form>
+

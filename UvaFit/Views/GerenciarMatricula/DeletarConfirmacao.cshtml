@@ -1,0 +1,13 @@
+﻿@model MatriculaModel
+@{
+    ViewData["Title"] = "Deletar Matrícula";
+}
+
+<div class="text-center">
+    <h3>Deseja realmente deletar o aluno(@Model.Nome )?</h3>
+</div>
+
+<div class="text-center">
+    <a class="btn btn-success" role="button" asp-controller="GerenciarMatricula" asp-action="Index">Cancelar</a>
+    <a class="btn btn-danger" role="button" asp-controller="GerenciarMatricula" asp-action="Deletar" asp-route-id="@Model.Id">Confirmar</a>
+</div>

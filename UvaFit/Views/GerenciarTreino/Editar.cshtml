@@ -1,0 +1,48 @@
+﻿@using UvaFit.Enums
+@model TreinoModel
+@{
+    ViewData["Title"] = "Editar Treino";
+}
+
+<div class="text-center">
+
+
+    <h1>Adicionar Treino</h1>
+
+</div>
+
+<form asp-controller="GerenciarTreino" asp-action="Adicionar" method="post">
+    <div class="form-group">
+        <label for="Nome">Nome</label>
+        <input type="text" asp-for="Nome" class="form-control" placeholder="Digite o nome do aluno">
+        @Html.ValidationMessageFor(x => x.Nome)
+    </div>
+
+    <div class="form-group">
+        <label for="CPF">CPF</label>
+        <input type="text" asp-for="CPF" class="form-control" placeholder="Digite o CPF do aluno">
+        @Html.ValidationMessageFor(x => x.CPF)
+    </div>
+
+    <div class="form-group">
+        <label for="Treino">Treino</label>
+        <input type="text" asp-for="Treino" class="form-control" placeholder="Digite o treino do aluno">
+        @Html.ValidationMessageFor(x => x.Treino)
+    </div>
+
+    <br />
+
+    <button type="submit" class="btn btn-success">Adicionar</button>
+    <a class="btn btn-secondary" asp-controller="GerenciarTreino" asp-action="Index" role="button">Voltar</a>
+
+</form>
+
+<style>
+    .field-validation-error {
+        color: #e01d1d;
+    }
+</style>
+
+
+
+

@@ -1,0 +1,67 @@
+﻿@model List<TreinoModel>
+@{
+    ViewData["Title"] = "Visualizar Treino";
+}
+
+<div class="text-center">
+
+    <div class="d-flex justify-content-between">
+        <a class="btn btn-danger" role="button" asp-controller="TelaAluno" asp-action="Index">Voltar</a>
+    </div>
+
+
+
+
+
+    <br />
+
+
+
+    <h1>Listagem de Treinos</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">CPF</th>
+                <th scope="col">Treino</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (TreinoModel treino in Model)
+                {
+                    <tr>
+                        <th scope="row">@treino.Id</th>
+                        <td>@treino.Nome</td>
+                        <td>@treino.CPF</td>
+                        <td>@treino.Treino</td>
+                        <td>
+                        </td>
+                    </tr>
+
+                }
+
+            }
+        </tbody>
+    </table>
+
+</div>
+
+<style>
+    .close-alert {
+        position: absolute;
+        right: -10px;
+        top: -15px;
+        border-radius: 15px;
+        width: 30px;
+        height: 31px;
+    }
+</style>
+
+
+
+

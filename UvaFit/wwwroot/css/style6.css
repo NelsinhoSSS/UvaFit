@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.2;
+    color: #303030;
+}
+
+header {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    width: 100vw;
+    z-index: 9999;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    background-color: white;
+    box-shadow: 0 0 20px 5px #4ad0a6;
+
+    a {
+        text-decoration: none;
+
+        & div {
+            display: flex;
+            gap: 1rem;
+
+            & .circulo {
+                position: absolute;
+                top: 0;
+                margin-top: 2.8rem;
+                left: 16.5rem;
+                transform: translateX(-50%);
+                width: 6rem;
+                height: 6rem;
+                border-radius: 50%;
+                background-color: #ffd000;
+            }
+
+            & .fit {
+                text-transform: uppercase;
+                font-size: 3rem;
+                padding-top: 1rem;
+                font-weight: 700;
+                z-index: 99;
+                color: black;
+            }
+
+            & .uva {
+                text-transform: uppercase;
+                font-size: 5rem;
+                font-weight: 700;
+                color: #004b78;
+            }
+        }
+    }
+
+    & p {
+        font-size: 2.2rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        color: #004b78;
+    }
+
+    & nav {
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+}
+
+section {
+    margin-top: 15rem;
+    width: 100%;
+    height: 100%;
+
+
+
+    & div {
+        background: white;
+        padding: 20px;
+        border-radius: 50px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        text-align: center;
+
+        & h2 {
+            margin-top: 0;
+            margin-bottom: 2rem;
+            color: #004b78;
+        }
+
+        & .btn {
+            background: #ffd000;
+            color: #004b78;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            width: 30rem;
+            margin: 2rem;
+            font-weight: 700;
+        }
+
+        & .btn:hover {
+            background: #0056b3;
+            color: #ffd000;
+        }
+    }
+
+}
